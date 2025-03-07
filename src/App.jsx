@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>I'm a Vite / React / JS template</h1>
+      <h1>I'm the beginning of Faux Amis'</h1>
       <img src="./public/guy-car.png"></img>
     </>
   )
