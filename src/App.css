@@ -1,0 +1,12 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgb(141, 141, 174);
+}
+
+img {
+  height: 50px;
+}
