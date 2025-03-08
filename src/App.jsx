@@ -1,15 +1,19 @@
 import { useState } from 'react'
 import './App.css'
+import WordContainer from './Components/WordContainer'
 
-function App() {
-  
+export default function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(prev => !prev);
+    document.body.classList.toggle('dark-mode');
+  };
 
   return (
-    <>
-      <h1>I'm the beginning of Faux Amis'</h1>
-      <img src="./public/guy-car.png"></img>
-    </>
+    <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
+      <WordContainer isDarkMode={isDarkMode} onDarkModeToggle={toggleDarkMode} />
+    </div>
   )
 }
 
-export default App
