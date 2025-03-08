@@ -35,6 +35,9 @@ export default function Header({ onLanguageChange, isDarkMode, onDarkModeToggle,
 
     return (
         <header>
+            <div className="site-banner">
+                <h1 className="site-logo">Faux-Amis</h1>
+            </div>
             <button 
                 className="dark-mode-toggle"
                 onClick={onDarkModeToggle}
