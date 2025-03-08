@@ -9,7 +9,22 @@ export default function WordContainer({ isDarkMode, onDarkModeToggle }) {
 
     const categories = {
         none: [],
-        misleading: ['attendre', 'demander', 'assister']
+        misleading: ['attendre', 'demander', 'assister'],
+        backstabbers: [],
+        lostInTranslation: []
+    };
+
+    const getCategoryTitle = (category) => {
+        switch(category) {
+            case 'misleading':
+                return selectedLanguage === 'french' ? "Les déroutants 🎭" : "The Misleading Ones 🎭";
+            case 'backstabbers':
+                return selectedLanguage === 'french' ? "Les traîtres 🗡️" : "The Backstabbers 🗡️";
+            case 'lostInTranslation':
+                return selectedLanguage === 'french' ? "Lost in Translation 🌐" : "Lost in Translation 🌐";
+            default:
+                return '';
+        }
     };
 
     const getFilteredEntries = () => {
@@ -94,15 +109,17 @@ export default function WordContainer({ isDarkMode, onDarkModeToggle }) {
                         : <>Find out who your <span className="trickster-word">false friends</span> are</>
                     }
                 </h3>
-                <button 
-                    className={`category-button ${selectedCategory === 'misleading' ? 'active' : ''}`}
-                    onClick={() => setSelectedCategory(selectedCategory === 'misleading' ? 'none' : 'misleading')}
-                >
-                    {selectedLanguage === 'french' 
-                        ? "Les déroutants 🎭"
-                        : "The Misleading Ones 🎭"
-                    }
-                </button>
+                <div className="category-buttons">
+                    {['misleading', 'backstabbers', 'lostInTranslation'].map(category => (
+                        <button 
+                            key={category}
+                            className={`category-button ${selectedCategory === category ? 'active' : ''}`}
+                            onClick={() => setSelectedCategory(selectedCategory === category ? 'none' : category)}
+                        >
+                            {getCategoryTitle(category)}
+                        </button>
+                    ))}
+                </div>
             </div>
             <div className="entries-grid">
                 {getFilteredEntries().map(entry => (

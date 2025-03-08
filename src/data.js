@@ -16,7 +16,7 @@ export default [
         id: "sympathique",
         wordFR: "Sympathique / Sympathetic",
         frenchMeaningInFR: "Agréable, gentil",
-        frenchMeaningExInFR: "Il est très sympa.",
+        frenchMeaningExInFR: "Il est très sympathique.",
         engMeaningInFR: "Compatissant, compréhensif",
         engMeaningExinENG: "He was sympathetic to my situation.",
         enMeaningExFRTranslation: "Il était compréhensif.",

@@ -36,7 +36,9 @@ export default function Header({ onLanguageChange, isDarkMode, onDarkModeToggle,
     return (
         <header>
             <div className="site-banner">
-                <h1 className="site-logo">Faux-Amis</h1>
+                <h1 className="site-logo">
+                    Faux<span className="hyphen">-</span>Amis
+                </h1>
             </div>
             <button 
                 className="dark-mode-toggle"
@@ -68,7 +70,7 @@ export default function Header({ onLanguageChange, isDarkMode, onDarkModeToggle,
             </div>
             <p className="intro-text french">
                 <h1>Saviez-vous que l'anglais et le français partagent près de 45 % de leur vocabulaire ?</h1>
-                <p>C'est un terrain commun assez vaste ! Mais attention—certains de ces mots sont de <span className="trickster-word">"faux amis"</span></p>
+                <p>C'est un terrain commun assez vaste ! Mais attention—certains de ces mots sont des <span className="trickster-word">"faux-amis"</span></p>
                 <p>Ils vous font croire qu'ils sont de votre côté, alors qu'en réalité, ils risquent de vous induire en erreur !</p>
                 <p>Ces petits malins peuvent avoir un sens légèrement différent... ou parfois, être totalement trompeurs.</p>
             </p>
@@ -87,7 +89,7 @@ export default function Header({ onLanguageChange, isDarkMode, onDarkModeToggle,
                     <p>Par exemple, vous rendez à un événement et votre ami vous dit:</p>
                     <p className="quote"><i>"Hey Benoit, can't wait to see tonight, the host wants everyone to wear a <span className="trickster-word">costume</span> tonight"</i></p>
                     <p>Porter un costume? Pas de problème!</p>
-                    <p>Vous êtes trahis par un <span className="trickster-word">faux ami</span> !</p>
+                    <p>Vous êtes trahis par un <span className="trickster-word">faux-ami</span> !</p>
                 </figcaption>
             </figure>
             <figure className="header-image english">

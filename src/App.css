@@ -1,6 +1,14 @@
+:root {
+  font-family: 'Raleway', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
 body {
-  background-color: rgb(141, 141, 174);
+  background-color: #1a1a1a;
   transition: background-color 0.3s ease;
+  font-family: inherit;
+  color: #e0e0e0;
+  line-height: 1.6;
 }
 
 #root {
@@ -9,8 +17,53 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  background-color: rgb(141, 141, 174);
+  background-color: #1a1a1a;
   transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+/* Ensure headings have proper weights */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.intro-text {
+  font-weight: 300;
+}
+
+.meaning-section h3 {
+  font-weight: 500;
+}
+
+/* Keep the special fonts for specific elements */
+.site-logo {
+  font-family: 'Cinzel', 'Trajan Pro', serif;
+}
+
+.trickster-word {
+  font-family: 'Cinzel', 'Trajan Pro', serif;
+  display: inline-block;
+  color: #c41e3a;  /* A deep, blood red */
+  font-style: italic;
+  text-shadow: 
+      0 0 8px rgba(255, 255, 255, 0.3),
+      0 0 15px rgba(196, 30, 58, 0.3),
+      1px 1px 2px rgba(0, 0, 0, 0.8);
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
+  padding: 0 4px;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Special handling for hyphens */
+.trickster-word span.hyphen {
+  font-family: 'Raleway', Arial, sans-serif;
+  display: inline-block;
+  position: relative;
+  top: -0.05em; /* Slight vertical adjustment if needed */
+  margin: 0 0.05em; /* Add a tiny bit of spacing around the hyphen */
 }
 
 .flag-label img {
@@ -365,6 +418,13 @@ header {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.category-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .category-button {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -375,6 +435,7 @@ header {
     font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    min-width: 200px;
 }
 
 .category-button:hover {
@@ -442,22 +503,6 @@ header {
     border-top-color: rgba(255, 255, 255, 0.2);
 }
 
-.trickster-word {
-    font-family: 'Cinzel', 'Trajan Pro', serif;
-    display: inline-block;
-    color: #c41e3a;  /* A deep, blood red */
-    text-shadow: 
-        0 0 8px rgba(255, 255, 255, 0.3),
-        0 0 15px rgba(196, 30, 58, 0.3),
-        1px 1px 2px rgba(0, 0, 0, 0.8);
-    transform-style: preserve-3d;
-    transition: all 0.4s ease;
-    padding: 0 4px;
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-}
-
 .trickster-word:hover {
     transform: translateY(-2px) rotateX(10deg);
     color: #ff2b2b;
@@ -492,7 +537,6 @@ header {
 }
 
 .site-logo {
-    font-family: 'Cinzel', 'Trajan Pro', serif;
     font-size: 4.5rem;
     font-weight: 700;
     color: #ffffff;

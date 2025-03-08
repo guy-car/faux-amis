@@ -17,9 +17,16 @@ export default function Entry({
     const wrapTricksterWords = (text, isMainWord = false) => {
         if (!text) return text;
         
-        // If this is the main word, just wrap it directly
+        // If this is the main word, wrap it directly but handle hyphens specially
         if (isMainWord) {
-            return <span className="trickster-word">{text}</span>;
+            return <span className="trickster-word">
+                {text.split('-').map((part, i) => (
+                    <>
+                        {i > 0 && <span className="hyphen">-</span>}
+                        {part}
+                    </>
+                ))}
+            </span>;
         }
 
         // For other text, look for instances of the word and other trickster words
@@ -27,8 +34,17 @@ export default function Entry({
         let processedText = text;
         
         tricksterWords.forEach(trickWord => {
-            const regex = new RegExp(`(${trickWord})`, 'gi');
-            processedText = processedText.replace(regex, '<span class="trickster-word">$1</span>');
+            if (trickWord.includes('-')) {
+                const escapedWord = trickWord.replace(/-/g, '\\-');
+                const regex = new RegExp(`(${escapedWord})`, 'gi');
+                processedText = processedText.replace(regex, (match) => {
+                    const parts = match.split('-');
+                    return `<span class="trickster-word">${parts.join('<span class="hyphen">-</span>')}</span>`;
+                });
+            } else {
+                const regex = new RegExp(`(${trickWord})`, 'gi');
+                processedText = processedText.replace(regex, '<span class="trickster-word">$1</span>');
+            }
         });
         
         return <span dangerouslySetInnerHTML={{ __html: processedText }} />;
