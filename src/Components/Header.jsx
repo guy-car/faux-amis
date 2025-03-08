@@ -45,7 +45,6 @@ export default function Header({ onLanguageChange, isDarkMode, onDarkModeToggle,
             >
                 {isDarkMode ? '☀️' : '🌙'}
             </button>
-            <h2 className="language-question">What do you speak? / Quelle langue tu parles?</h2>
             <div className="language-toggle">
                 <input 
                     type="radio" 
