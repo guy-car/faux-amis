@@ -29,14 +29,14 @@ export default [
         id: "brave",
         wordFR: "Brave",
         frenchMeaningInFR: "Gentil, sage, bien élevé",
-        frenchMeaningExInFR: "Un enfant brave.",
+        frenchMeaningExInFR: "Un brave petit garçon.",
         engMeaningInFR: "Courageux",
         engMeaningExinENG: "She is a brave firefighter.",
         enMeaningExFRTranslation: "Elle est courageuse.",
         wordENG: "Brave",
         engMeaningInENG: "Courageous",
         frenchMeaningInENG: "Good-hearted, well-behaved",
-        frenchMeaningExENGTranslation: "A well-behaved child."
+        frenchMeaningExENGTranslation: "A good boy."
     },
     {
         id: "pretend",
@@ -68,25 +68,25 @@ export default [
         id: "attendre",
         wordFR: "Attendre / To Attend",
         frenchMeaningInFR: "Patienter, rester jusqu'à l'arrivée",
-        frenchMeaningExInFR: "J'attends le bus.",
+        frenchMeaningExInFR: "J'attends devant votre bureau",
         engMeaningInFR: "S'attendre à, prévoir",
-        engMeaningExinENG: "I expected him to be here.",
+        engMeaningExinENG: "I attended a seminar last week.",
         enMeaningExFRTranslation: "Je m'attendais à ce qu'il soit là.",
-        wordENG: "To Wait / Attendre",
-        engMeaningInENG: "To expect",
+        wordENG: "To attend / Attendre",
+        engMeaningInENG: "To be present for something",
         frenchMeaningInENG: "To wait",
-        frenchMeaningExENGTranslation: "I am waiting for the bus."
+        frenchMeaningExENGTranslation: "I am waiting in front of your office."
     },
     {
-      wordUS: "Demand / Demander",
-      wordFR: "Demander / Demand",
+      wordUS: "To demand / Demander",
+      wordFR: "Demander / To demand",
       id: "demander",
-      frenchMeaningForUS: "To ask",
-      exampleForFR: "Je demande l'addition.",
+      frenchMeaningForUS: "Forcefully request",
+      exampleForFR: "I demand a refund or I'll trash talk you on social media.",
       translationForUS: "I ask for the check.",
-      englishMeaningForFR: "To demand (forcefully request)",
-      exampleForEN: "He demanded a refund.",
-      translationForFRExample: "Il a exigé un remboursement."
+      englishMeaningForFR: "To ask",
+      exampleForEN: "Il m'a demandé comment j'allais en ce moment",
+      translationForFRExample: "He asked me how I was doing."
     },
     {
       wordUS: "Realize / Réaliser",

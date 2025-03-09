@@ -10,8 +10,8 @@ export default function WordContainer({ isDarkMode, onDarkModeToggle }) {
     const categories = {
         none: [],
         misleading: ['attendre', 'demander', 'assister'],
-        backstabbers: [],
-        lostInTranslation: []
+        backstabbers: ['sensible'],
+        lostInTranslation: ['pretend', 'brave', 'sympathique']
     };
 
     const getCategoryTitle = (category) => {
